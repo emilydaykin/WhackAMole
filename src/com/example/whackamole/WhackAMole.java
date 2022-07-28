@@ -22,12 +22,11 @@ public class WhackAMole {
 
     public boolean place(int x, int y) {
         /*
-         * Given a location (x,y), place a mole at that location.
-         * Return true if you can. (Also update number of moles left.)
+         * Given a location (X, Y), place a mole at that location.
+         * Also update number of moles left.
          */
 
         // Place mole (if there isn't a mole there already):
-
         if (moleGrid[x][y] != 'M') {
             moleGrid[x][y] = 'M';
             // Update molesLeft (count number of moles currently in the grid, then deduct from 10):
@@ -39,7 +38,7 @@ public class WhackAMole {
                     }
                 }
             }
-//			molesLeft = 10 - numberOfMoles;  // fails their tests??
+			// molesLeft = 10 - numberOfMoles;
             molesLeft = numberOfMoles;
             return true;
         } else {
@@ -76,8 +75,6 @@ public class WhackAMole {
             if (molesLeft > 0) {
                 System.out.println(String.format("Whoohoo! You whacked a mole! %s to go!", molesLeft));
             } else {
-                // System.out.println("CONGRATULATIONS! You whacked the last mole! WELL DONE!");
-                // System.out.println("Let's see where all the moles were lurking...");
                 System.out.println("""
                         CONGRATULATIONS! You whacked the last mole! WELL DONE! \n
                         Let's see where all the moles were lurking...
@@ -91,7 +88,8 @@ public class WhackAMole {
             System.out.println("Ah you've already whacked a mole there. You just lost an attempt, sorry!");
         } else {
             attemptsLeft--;
-            molesLeft = numberOfMoles;  // if not specified here, molesLeft will remain (initialised at) 0, and code will break in main
+            // if this is not specified here, molesLeft will remain (initialised at) 0, and code will break in main
+            molesLeft = numberOfMoles;
             System.out.println("No mole hit, try again.");
         }
     }
@@ -100,7 +98,7 @@ public class WhackAMole {
         /*
          * Print the grid without showing where the moles are.
          * For every spot that has recorded a “whacked mole,”
-         * print out a W, or * otherwise.
+         * print out a W, and * otherwise.
          */
 
         // Hide the 'M's (duplicate grid and convert them to '*'s)
@@ -127,10 +125,9 @@ public class WhackAMole {
 
     public void printGrid() {
         /*
-         * Print grid completely. This dumps the 2d array on the screen.
-         * The places where the moles are are printed as an 'M'. The places
-         * where the moles have been whacked are printed as a 'W'. The places
-         * that don’t have a mole are left as *.
+         * Print entire grid to display the 2d array to the user.
+         * Moles are printed as an 'M'. Whacked moles are printed as
+         * a 'W'. Cells that don’t have a mole are left as *.
          */
 
         // Print out moleGrid:
@@ -154,13 +151,8 @@ public class WhackAMole {
             game.place(randomX, randomY);
         }
 
-        // 3) Allow user to enter x and y coords where they want to whack
+        // 3) Allow user to enter X and Y coordinates where they want to whack
         //    Tell them they have a max of 50 attempts to get all moles.
-        // System.out.println("Welcome to a new game! You have " + maxAttempts + " attempts to "
-        // 		+ "get all " + gridDims + " of the moles in our 10x10 grid. \n At any point, you can input the "
-        // 		+ "coordinates (-5, -5) to display the mole grid, \n or input the coordinates (-1,-1) "
-        // 		+ "to surrender, which will terminate the game and \n display the WhackAMole grid. "
-        // 		+ "\n Have fun!");
         String welcomeMessage = String.format(
                 """
                   Welcome to a new game! You have %1$s attempts to get all %2$s of the moles in our 10x10 grid. 
@@ -174,8 +166,6 @@ public class WhackAMole {
         int i = 0;
         for (i = 0; i <= maxAttempts; i++) {
             if (i == maxAttempts) {
-                // System.out.println("GAME OVER. You have used up all " + maxAttempts +
-                // 		" attempts to whack all the moles. Displaying your game:");
                 String gameOverMessage = String.format(
                         """
                           GAME OVER. You have used up all %s attempts to whack all the moles. 
@@ -199,7 +189,6 @@ public class WhackAMole {
                     System.out.println("Displaying your game progress. 'W' is where you've successfully whacked a mole!");
                     game.printGridToUser();
                 } else {
-                    // System.out.println("Taking a whack at location (" + userInputX + ", " + userInputY + ")...");
                     System.out.println(String.format("Taking a whack at location (%1$s, %2$s)...", userInputX, userInputY));
                     game.whack(userInputX, userInputY);
                     if (game.molesLeft == 0) {
