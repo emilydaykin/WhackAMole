@@ -192,8 +192,6 @@ public class WhackAMole {
                     game.printGridToUser();
                 } else if (userInputX > 9 || userInputX < -1 || userInputY > 9 || userInputY < -1
                 ) {
-                    System.out.println(userInputX < -1);
-                    System.out.println(userInputX != Math.round(userInputX));
                     System.out.println(String.format("""
                             Coordinates go from (0,0) to (9,9). Or (-1,-1) to surrender and (-5,-5) to display your progress grid. 
                             Your input (%1$s, %2$s) was out of bounds. 
