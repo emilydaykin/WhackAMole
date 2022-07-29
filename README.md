@@ -2,6 +2,32 @@
 
 The traditional arcade game, coded up in Java (JDK 18).
 
+### Welcome
+<p align="center">
+  <img src="./assets/welcome.png" width="95%"  />
+</p>
+
+### Display Grid
+<p align="center">
+  <img src="./assets/display_grid.png" width="95%"  />
+</p>
+
+### First Mole Hit
+<p align="center">
+  <img src="./assets/first_mole_hit.png" width="95%"  />
+</p>
+
+### Surrendering
+<p align="left">
+&ensp;&ensp;  
+<img src="./assets/surrendering.png" width="60%"  />
+</p>
+
+### Game Over
+<p align="center">
+  <img src="./assets/game_over.png" width="95%"  />
+</p>
+
 ## Installation
 - Run in IntelliJ:
   1. Clone this repo and open the project in (JetBrains') IntelliJ IDEA
