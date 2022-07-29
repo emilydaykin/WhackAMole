@@ -38,7 +38,6 @@ public class WhackAMole {
                     }
                 }
             }
-			// molesLeft = 10 - numberOfMoles;
             molesLeft = numberOfMoles;
             return true;
         } else {
@@ -138,7 +137,7 @@ public class WhackAMole {
 
     public static void main(String[] args) { // "a main method"
         // 1) Instantiate game with number of attempts and grid dimensions
-        int maxAttempts = 110;
+        int maxAttempts = 50;
         int gridDims = 10;
         WhackAMole game = new WhackAMole(maxAttempts, gridDims);
 
