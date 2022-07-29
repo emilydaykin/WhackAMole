@@ -138,7 +138,7 @@ public class WhackAMole {
 
     public static void main(String[] args) { // "a main method"
         // 1) Instantiate game with number of attempts and grid dimensions
-        int maxAttempts = 50;
+        int maxAttempts = 110;
         int gridDims = 10;
         WhackAMole game = new WhackAMole(maxAttempts, gridDims);
 
@@ -155,10 +155,13 @@ public class WhackAMole {
         //    Tell them they have a max of 50 attempts to get all moles.
         String welcomeMessage = String.format(
                 """
-                  Welcome to a new game! You have %1$s attempts to get all %2$s of the moles in our 10x10 grid. 
-                  \n At any point, you can input the coordinates (-5, -5) to display the mole grid, \n or input 
-                  the coordinates (-1,-1) to surrender, which will terminate the game and \n display the 
-                  WhackAMole grid. \n Have fun!
+                  WELCOME to a new game! You have %1$s attempts to get all %2$s of the moles in our 10x10 grid. 
+                  
+                  At any point, you can input the coordinates (-5, -5) to display the mole grid,
+                  or input the coordinates (-1,-1) to surrender, which will terminate the game and
+                  display the WhackAMole grid.
+                  
+                  Have fun!
                 """, maxAttempts, gridDims
         );
         System.out.println(welcomeMessage);
@@ -188,6 +191,15 @@ public class WhackAMole {
                 } else if (userInputX == -5 && userInputY == -5) {
                     System.out.println("Displaying your game progress. 'W' is where you've successfully whacked a mole!");
                     game.printGridToUser();
+                } else if (userInputX > 9 || userInputX < -1 || userInputY > 9 || userInputY < -1
+                ) {
+                    System.out.println(userInputX < -1);
+                    System.out.println(userInputX != Math.round(userInputX));
+                    System.out.println(String.format("""
+                            Coordinates go from (0,0) to (9,9). Or (-1,-1) to surrender and (-5,-5) to display your progress grid. 
+                            Your input (%1$s, %2$s) was out of bounds. 
+                            Please try again.
+                            """, userInputX, userInputY));
                 } else {
                     System.out.println(String.format("Taking a whack at location (%1$s, %2$s)...", userInputX, userInputY));
                     game.whack(userInputX, userInputY);
