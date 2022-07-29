@@ -1,6 +1,6 @@
 # Whack-A-Mole
 
-The traditional arcade game, coded up in Java (JDK 18).
+The traditional arcade game, coded up in Java (JDK 18)!
 
 ### Welcome
 <p align="center">
@@ -39,7 +39,7 @@ The traditional arcade game, coded up in Java (JDK 18).
 ## Installation
 - Run in IntelliJ:
   1. Clone this repo and open the project in (JetBrains') IntelliJ IDEA
-  2. Set the JDK to 18 (download it first if you don't have it already)
+  2. Set the JDK to 18 (download first if necessary)
   3. Run `src/com/example/whackamole/WhackAMole.java`
 - Run in VS Code:
   1. Install "Extension Pack for Java" from VSCode packages
@@ -49,9 +49,9 @@ The traditional arcade game, coded up in Java (JDK 18).
 ## Code Features / How to Play:
 - The user has 50 attempts to whack all 10 hidden moles in the 10x10 grid.
 - Each turn, the user is prompted to enter an X- and Y-coordinate of the grid where they would like to whack.
-- If their guess/whack is correct, the number of moles left to whack are reduced and the user is prompted for their next move.
-- If their guess/whack is incorrect, their attempts left are reduced and they're re-prompted for their next move.
-- The user can enter the coordinates of (-5,-5) to see their progress: the entire grid and where they've successfully whacked a mole.
+- If their guess/whack is correct, the number of moles left to whack is reduced and the user is prompted for their next move.
+- If their guess/whack is incorrect, their attempts left are reduced, and they're re-prompted for their next move.
+- The user can enter the coordinates of (-5,-5) to see their progress: the entire grid and where they've successfully whacked a mole (marked by a W).
 - The user can enter the coordinates of (-1,-1) to surrender, which will end the game and reveal the entire grid and where the remaining, and whacked, moles are.
 
 ## Game Script
