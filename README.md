@@ -9,32 +9,31 @@ The traditional arcade game, coded up in Java (JDK 18).
 
 ### Display Grid after First Mole Hit
 <p align="left">
-  &emsp;&emsp;&emsp;
+  &emsp;&emsp;&ensp;
   <img src="./assets/first_mole_hit_display_grid.png" width="75%"  />
 </p>
 
 ### Surrendering
 <p align="left">
-  &emsp;&emsp;&emsp;
+  &emsp;&emsp;&ensp;
   <img src="./assets/surrendering.png" width="40%"  />
 </p>
 
 ### Game Over
 <p align="left">
-  &emsp;&emsp;&emsp; 
+  &emsp;&emsp;&ensp; 
   <img src="./assets/game_over.png" width="65%"  />
 </p>
 
 ### Inputting Wrong Coordinates
-<p align="left">
-  &emsp;&emsp;&emsp;
-  <img src="./assets/wrong_coords.png" width="70%"  />
+<p align="center">
+  <img src="./assets/wrong_coords.png" width="90%"  />
 </p>
 
 ### User Wins
 <p align="left">
-  &emsp;&emsp;&emsp; 
-  <img src="./assets/user_wins.png" width="55%"  />
+  &emsp;&emsp;&ensp; 
+  <img src="./assets/user_wins.png" width="50%"  />
 </p>
 
 ## Installation
