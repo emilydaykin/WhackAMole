@@ -9,26 +9,26 @@ The traditional arcade game, coded up in Java (JDK 18).
 
 ### Display Grid
 <p align="left">
-  &ensp;&ensp; 
+  &ensp;&ensp;&ensp;
   <img src="./assets/display_grid.png" width="80%"  />
 </p>
 
 ### First Mole Hit
 <p align="left">
-  &ensp;&ensp; 
+  &ensp;&ensp;&ensp;
   <img src="./assets/first_mole_hit.png" width="80%"  />
 </p>
 
 ### Surrendering
 <p align="left">
-  &ensp;&ensp;  
-  <img src="./assets/surrendering.png" width="50%"  />
+  &ensp;&ensp;&ensp;
+  <img src="./assets/surrendering.png" width="45%"  />
 </p>
 
 ### Game Over
 <p align="left">
-  &ensp;&ensp; 
-  <img src="./assets/game_over.png" width="80%"  />
+  &ensp;&ensp;&ensp; 
+  <img src="./assets/game_over.png" width="75%"  />
 </p>
 
 ## Installation
