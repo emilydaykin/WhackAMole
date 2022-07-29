@@ -44,6 +44,7 @@ The traditional arcade game, coded up in Java (JDK 18).
 - Run in VS Code:
   1. Install "Extension Pack for Java" from VSCode packages
   2. Install a JDK (e.g. [Eclipse Temurin 11.0.15+10](https://adoptium.net/temurin/releases/?version=11))
+  3. Run `src/com/example/whackamole/WhackAMole.java`
 
 ## Code Features / How to Play:
 - The user has 50 attempts to whack all 10 hidden moles in the 10x10 grid.
